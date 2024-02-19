@@ -20,7 +20,8 @@ public class LessonSeventeen extends JFrame {
             @Override
             public void valueChanged(ListSelectionEvent e) {
                 if (!e.getValueIsAdjusting()) {
-                    Obrazek img = (Obrazek) ((JList) e.getSource()).getSelectedValue();
+                    Obrazek img = lista.getSelectedValue();
+                    ;
 
                     obrazek.setIcon(img.getImage());
                     opis.setText(img.getDescription());
@@ -38,12 +39,11 @@ public class LessonSeventeen extends JFrame {
     private JPanel panelListy = new JPanel();
     private JPanel panelObrazka = new JPanel();
     private JPanel panelOpisu = new JPanel();
-    private JList lista = new JList(
-            new Obrazek[] {
-                    new Obrazek("Red", "Red Color"),
-                    new Obrazek("Green", "Green Color"),
-                    new Obrazek("Yellow", "Yellow Color")
-            });
+    private JList<Obrazek> lista = new JList<>(new Obrazek[] {
+            new Obrazek("Red", "Red Color"),
+            new Obrazek("Green", "Green Color"),
+            new Obrazek("Yellow", "Yellow Color")
+    });
     private JLabel obrazek = new JLabel();
     private JLabel opis = new JLabel();
 
