@@ -88,8 +88,10 @@ public class LessonEleven extends JFrame {
                         if (pasekNarzedzi.getComponent(i) instanceof ColorButton) {
 
                             ColorButton tmp = (ColorButton) pasekNarzedzi.getComponent(i);
-                            tmp.setBackground(Color.WHITE);
-                            tmp.setZaznaczone(false);
+                            if (tmp != ColorButton.this && tmp.zaznaczone) {
+                                tmp.setBackground(Color.WHITE);
+                                tmp.setZaznaczone(false);
+                            }
                             // rootPane.setCursor (new Cursor (Cursor.CROSSHAIR_CURSOR)); // ustawia jakis
                             // kursor wszedzie w aplikacji
 
@@ -111,7 +113,7 @@ public class LessonEleven extends JFrame {
         }
 
         ColorButton ten = this;
-        boolean zaznaczone = false;
+        private boolean zaznaczone = false;
     }
 
     public static void main(String[] args) {
