@@ -8,8 +8,8 @@ public class RelationalOperators {
         boolean Porównanie = a == b;
         System.out.println(Porównanie);
 
-        boolean Porównanie2 = 4 == 4;
-        System.out.println(Porównanie2);
+        // boolean Porównanie2 = 4 == 4;
+        // System.out.println(Porównanie2);
 
         // Operatory logiczne (&& = i), (|| = lub), (!=(rożne)), (==(równe))
 
