@@ -16,8 +16,8 @@ public class LessonTen extends JFrame {
 
         JMenuItem menuPod = menuFile.add(new JMenuItem("New"));
 
-        JMenu menuFAQ = pasekMenu.add(new JMenu("FAQ"));
-        JMenuItem menuShow = menuFAQ.add(new JMenuItem("Show"));
+        // JMenu menuFAQ = pasekMenu.add(new JMenu("FAQ"));
+        // JMenuItem menuShow = menuFAQ.add(new JMenuItem("Show"));
 
         menuPod.addActionListener(new ActionListener() {
             @Override
@@ -29,7 +29,7 @@ public class LessonTen extends JFrame {
         menuFile.addSeparator();
         Action actionSave = new ActionSave("Save", "Save file on disc?", "ctrl S", new ImageIcon("ikona.png"),
                 KeyEvent.VK_Z);
-        JMenuItem podMenuSave = menuFile.add(actionSave);
+        // JMenuItem podMenuSave = menuFile.add(actionSave);
         // Wczesniej:
         // JMenuItem podMenuSave = menuFile.add("Save");
 
