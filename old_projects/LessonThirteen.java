@@ -30,9 +30,10 @@ public class LessonThirteen extends JFrame {
                     System.out.println("Releasing mouse button");
 
                 if (!e.getValueIsAdjusting()) {
-                    Object[] selectedValues = ((JList) e.getSource()).getSelectedValuesList().toArray(); // Gets
-                                                                                                         // selected
-                                                                                                         // values from
+                    Object[] selectedValues = ((JList<?>) e.getSource()).getSelectedValuesList().toArray(); // Gets
+                                                                                                            // selected
+                                                                                                            // values
+                                                                                                            // from
                     // the list
                     String items = "";
 
