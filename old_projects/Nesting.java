@@ -79,25 +79,25 @@ class BankAccount {
         return this.balance;
     }
 
-    void calculateInt(double rate) // jesli dodamy final to wtedy mozna usunac rate z class'y Interests i bedzie
-                                   // dzialalo all
-    {
-        Interests interests = new Interests(rate);
+    // Jesli dodamy final to wtedy mozna usunac rate z class'y Interests i bedzie
+    // dzialalo all
+    void calculateInt(double rate) {
+        new Interests(rate);
     }
 
-    class Interests // klase ta mozna tez wrzucic do metody poprzedniej klasy np. start i tez bedzie
-                    // smigac
-    {
+    // Klase ta mozna tez wrzucic do metody poprzedniej klasy np. start i tez bedzie
+    // smigac
+    class Interests {
 
-        private double interestsRate;
+        private double interestRate;
 
         public Interests(double interestsRate) {
-            this.interestsRate = interestsRate;
-            this.changeBalance(interestsRate);
+            this.interestRate = interestsRate;
+            this.changeBalance();
         }
 
-        void changeBalance(double rate) {
-            double interests = (balance * rate) / 100;
+        void changeBalance() {
+            double interests = (balance * interestRate) / 100;
             balance += interests;
         }
 
